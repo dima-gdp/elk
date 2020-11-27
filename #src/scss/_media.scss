@@ -1,0 +1,152 @@
+@media (max-width: 1630px) {
+	.header__nav {
+		padding: 15px 50px 0px 50px;
+	}
+	.header__nav li:not(:last-child) {
+		margin-right: 45px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.header__content {
+		flex: 0 0 70%;
+	}
+
+	.header__nav li:not(:last-child) {
+		margin-right: 3vw;
+	}
+	.header__nav {
+		padding: 15px 0px 0px 15px;
+	}
+	.header__nav li a {
+		font-weight: 500;
+		font-size: 17px;
+	}
+	.header__logo {
+		flex: 0 0 97px;
+	}
+	.header__title {
+		max-width: 196px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.header__nav {
+		display: none;
+	}
+	.header__top {
+		padding-bottom: 0;
+		justify-content: center;
+	}
+	.header__content {
+		flex: 1 1 auto;
+		padding: 0px 25px 0px 0px;
+	}
+	.header__social {
+		margin-right: 45px;
+	}
+	.header__social a:not(:last-child) {
+		margin-right: 30px;
+	}
+	.header__tel {
+		margin-right: 25px;
+	}
+	.header__burger {
+		display: flex;
+	}
+	.events__title {
+		margin-bottom: 45px;
+	}
+	.events {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	.tabs__list {
+		margin-bottom: 37px;
+	}
+	.tabs__item:not(:last-child) {
+		margin-right: 35px;
+	}
+	.tabs__item {
+		min-height: 60px;
+		padding: 10px 40px;
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 992px) {
+	.header__tel {
+		display: none;
+	}
+
+	.header__content {
+		flex: 0 0 auto;
+		padding: 0px 25px 0px 0px;
+	}
+
+	.header__title {
+		max-width: 204px;
+		font-size: 17px;
+	}
+	.header__social {
+		margin-right: 30px;
+	}
+	.header__social a:not(:last-child) {
+		margin-right: 25px;
+	}
+	.tabs__item:not(:last-child) {
+		margin-right: 30px;
+	}
+	.tabs__item {
+		min-height: 60px;
+		padding: 10px 30px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header__content {
+		display: none;
+	}
+	.events__title {
+		br {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.header__title {
+		max-width: 224px;
+		padding-left: 20px;
+		margin-right: 0;
+	}
+	.header__logo {
+		margin-right: 0;
+	}
+	.events {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.title {
+		margin-bottom: 35px;
+		font-size: 29px;
+	}
+	.tabs__item {
+		margin-bottom: 15px;
+		line-height: 1;
+		min-height: 50px;
+		border-radius: 80px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 425px) {
+	.header__title {
+		display: none;
+	}
+	.header__logo {
+		flex: 0 0 86px;
+	}
+}
