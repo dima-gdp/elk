@@ -33,6 +33,13 @@ body {
 	color: #e31e24;
 }
 
+.footer-text {
+	font-size: 12px;
+	line-height: 1.5;
+	letter-spacing: 0.05em;
+	color: #000000;
+}
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -48,4 +55,38 @@ body {
 	left: 0;
 	top: 0;
 	width: 100%;
+}
+
+@keyframes logo {
+	0% {
+		transform: translateX(105%);
+	}
+	97% {
+		transform: translateX(-110%);
+		opacity: 1;
+	}
+	98% {
+		transform: translateX(-115%);
+		opacity: 0;
+	}
+	99% {
+		transform: translateX(115%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(115%);
+		opacity: 1;
+	}
+}
+
+@keyframes rope {
+	100% {
+		transform: rotate(20deg);
+	}
+}
+
+@keyframes rope-2 {
+	100% {
+		transform: rotate(10deg);
+	}
 }

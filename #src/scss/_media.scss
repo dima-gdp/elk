@@ -1,9 +1,21 @@
-@media (max-width: 1630px) {
+@media (max-width: 1640px) {
 	.header__nav {
 		padding: 15px 50px 0px 50px;
 	}
 	.header__nav li:not(:last-child) {
 		margin-right: 45px;
+	}
+	.news__men {
+		margin-left: 11%;
+	}
+	.news__ropes::after {
+		right: 9%;
+	}
+}
+
+@media (max-width: 1600px) {
+	.news__ropes {
+		margin-right: 0;
 	}
 }
 
@@ -28,6 +40,34 @@
 	.header__title {
 		max-width: 196px;
 		font-size: 16px;
+	}
+	.news__content {
+		padding-top: 100px;
+		padding-bottom: 150px;
+	}
+	.news__men {
+		margin-bottom: -20px;
+	}
+
+	.news__vk {
+		width: 320px;
+	}
+
+	.news__inst {
+		max-width: 320px;
+	}
+	.inst__id {
+		font-size: 25px;
+	}
+	.footer__title {
+		margin-right: 50px;
+	}
+	.footer__text-block {
+		margin-right: 50px;
+	}
+	.footer__logo {
+		flex: 1 0 120px;
+		height: 141px;
 	}
 }
 
