@@ -3,6 +3,162 @@
 @import "_reset.scss";
 @import "_overall.scss";
 @import "_burger.scss";
+@import "_modal.scss";
+@import "_polit-modal.scss";
+
+// mob-menu =================================================================================
+
+.mob-menu {
+	position: fixed;
+	right: -150%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 50px 15px 30px 15px;
+	border-radius: 20px 0 0 20px;
+	z-index: 888;
+	background: #ebebeb;
+	width: 320px;
+	height: 100%;
+	overflow: auto;
+	box-shadow: 0 0 7px #9e9e9e4d;
+	transition: right 0.4s, visibility 0.4s;
+
+	&.active {
+		visibility: visible;
+		right: 0;
+	}
+
+	// .mob-menu__close
+	&__close {
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-color: transparent;
+		cursor: pointer;
+
+		@media (min-width: 992px) {
+			&:hover.mob-menu__close::after,
+			&:hover.mob-menu__close::before {
+				background-color: #358bee;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 1px);
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			transition: background-color 0.3s;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+	// .mob-menu__title
+	&__title {
+		margin-bottom: 30px;
+		font-weight: 600;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	// .mob-menu__content
+	&__content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	// .mob-menu__top
+	&__top {
+		padding-bottom: 21px;
+	}
+	// .mob-menu__social
+	&__social {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 40px;
+
+		a {
+			&:not(:last-child) {
+				margin-right: 39px;
+			}
+		}
+	}
+	// .mob-menu__vk
+	&__vk {
+	}
+	// .mob-menu__inst
+	&__inst {
+	}
+	// .mob-menu__tel
+	&__tel {
+		display: block;
+		text-align: center;
+		margin-bottom: 40px;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 1.2;
+		letter-spacing: 0.05em;
+		color: #2c2c2c;
+	}
+	// .mob-menu__btn
+	&__btn {
+		padding: 10px 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 206px;
+		min-height: 50px;
+		background: #e31e24;
+		border-radius: 49px;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 1.71;
+		text-transform: uppercase;
+		color: #fefefe;
+	}
+	// .mob-menu__nav
+	&__nav {
+		flex: 1 1 auto;
+		li {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			a {
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 1.33;
+				color: #000000;
+				transition: font-weight 0.3s, color 0.3s;
+
+				@media (min-width: 992px) {
+					&:hover {
+						font-weight: 500;
+						color: #e31e24;
+					}
+				}
+			}
+		}
+
+		.current-menu-item a {
+			font-weight: 500;
+			color: #e31e24;
+		}
+	}
+}
 
 // Header ====================================================================================
 
@@ -255,7 +411,8 @@
 	}
 	// .events__column
 	&__column {
-		flex: 1 0 546px;
+		// flex: 1 0 546px;
+		flex: 1 0 500px;
 		padding: 0px 19px 39px 19px;
 	}
 }
@@ -490,7 +647,7 @@
 			animation-delay: 2s;
 		}
 
-		// animation-name: logo;
+		animation-name: logo;
 		animation-duration: 7s;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in;
@@ -507,7 +664,7 @@
 // News ===========================================================================================
 
 .news {
-	background: url("../img/news__bg.jpg") 0 0 / cover no-repeat;
+	background: url("../img/news__bg.jpg") 100% 0 / cover no-repeat;
 	// .news__container
 	&__container {
 		display: flex;
@@ -549,7 +706,7 @@
 		width: 100%;
 		height: 100%;
 		margin-right: calc((100vw - 1600px) / -2);
-		overflow-y: hidden;
+		overflow: hidden;
 		&::before {
 			content: "";
 			position: absolute;
@@ -658,7 +815,7 @@
 	}
 	// .footer__logo
 	&__logo {
-		flex: 1 0 153px;
+		flex: 0 0 153px;
 		height: 164px;
 		margin-right: 39px;
 		position: relative;
@@ -674,7 +831,7 @@
 	}
 	// .footer__title
 	&__title {
-		flex: 1 0 269px;
+		max-width: 269px;
 		margin-right: 94px;
 		font-weight: bold;
 		font-size: 24px;
@@ -686,7 +843,7 @@
 	}
 	// .footer__text-block
 	&__text-block {
-		flex: 1 0 306px;
+		max-width: 306px;
 		margin-right: 94px;
 		margin-bottom: 30px;
 	}
@@ -700,7 +857,7 @@
 	}
 	// .footer__dev
 	&__dev {
-		flex: 1 0 306px;
+		max-width: 306px;
 		margin-bottom: 30px;
 		a {
 			color: #000000;

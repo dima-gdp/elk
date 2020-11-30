@@ -4,12 +4,119 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Вологодские лоси</title>
 </head>
 
 <body>
 	<div class="wrapper">
+		<div id="modal" class="modal">
+			<div class="modal__container">
+				<button class="modal__close" data-fancybox-close></button>
+				<div class="modal__image" style="background-image: url('img/news-men.png');"></div>
+				<div class="modal__content">
+					<div class="modal__title title">Заказать звонок</div>
+					<p class="modal__subtitle">Просто заполните контактную форму, наш специалист свяжется с Вами в ближайшее
+						время.</p>
+					<form class="modal__form">
+						<input type="text" class="modal__input" placeholder="Ваше имя">
+						<input type="tel" class="modal__input modal-tel" placeholder="+7 (___)-___-__-__">
+						<button class="modal__btn" type="submit">отправить</button>
+					</form>
+					<div class="modal__privacy">Нажимая кнопку, я принимаю<br>политику обработки <a id="to-privacy">персональных
+							данных</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal-polit" class="modal-container-polit">
+			<div class="modal-close-polit" data-fancybox-close></div>
+			<div class="modal-block-polit">
+				<div class="modal-content-polit">
+					<div class="title-modal-polit">Политика конфидециальности</div>
+					<div class="caption-modal-polit">
+						<p class="subtitle-modal-polit">Настоящее Пользовательское соглашение является публичным документом
+							администратора сайта
+							https://lomex-group.ru (далее – Администратор) и определяет порядок использования посетителями (далее -
+							Посетитель) сайта https://lomex-group.ru, принадлежащего Администратору, и обработки, хранения и иного
+							использования информации, получаемой Администратором от Посетителя на сайте Администратора. Администратор
+							сайта может изменить в любой момент данное Пользовательское соглашение без уведомления Посетителя сайта.
+						</p>
+						<ul>
+							<li>Посетитель сайта, оставляя какую-либо информацию, относящуюся прямо или косвенно к определенному или
+								определяемому физическому лицу (далее - Персональные данные), подтверждает, что ознакомился с данным
+								Пользовательским соглашением и согласен с ним.</li>
+							<li>В отношении всех сообщаемых Персональных данных Посетитель дает Администратору полное согласие на их
+								обработку.</li>
+							<li>Администратор сайта гарантирует Посетителю, что обработка и хранение поступивших Персональных данных
+								Посетителя будет осуществляться в соответствии с положениями Федерального закона от 27.06.2006 № 152-ФЗ
+								«О персональных данных».</li>
+							<li>Посетитель сайта понимает и соглашается с тем, что предоставление Администратору какой-либо
+								информации, не имеющей никакого отношения к целям сайта, запрещено. Такой информацией может являться
+								информация, касающаяся состояния здоровья, интимной жизни, национальности, религии, политических,
+								философских и иных убеждений Посетителя, а равно и информация, которая является коммерческой, банковской
+								и иной тайной Посетителя сайта.</li>
+							<li>Администратор гарантирует Посетителю, что использует Персональные данные, поступившие от Посетителя,
+								исключительно в целях, ограниченных маркетинговыми, рекламными, информационными целями Администратора, а
+								также для анализа и исследования Посетителей сайта, а также в целях предоставления ему товаров и услуг
+								непосредственно находящихся, либо нет, на сайте Администратора.</li>
+							<li>Посетитель в соответствии с ч. 1 ст. 18 Федерального закона «О рекламе» дает Администратору свое
+								согласие на получение сообщений рекламного характера по указанным контактным данным.</li>
+							<li>Посетитель самостоятельно несёт ответственность за нарушение законодательства при использовании сайта
+								Администратора.</li>
+							<li>Администратор не несет никакой ответственности в случае нарушения законодательства Посетителем, в том
+								числе, не гарантирует, что содержимое сайта соответствует целям Посетителя сайта.</li>
+							<li>Посетитель сайта несет самостоятельно ответственность в случае, если были нарушены права и законные
+								интересы третьих лиц, при использовании сайта Администратора, Посетителем.</li>
+							<li>Администратор вправе запретить использование сайта Посетителю, если на то есть законные основания.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mob-menu">
+			<button class="mob-menu__close"></button>
+			<p class="mob-menu__title">Меню</p>
+			<nav class="mob-menu__content">
+				<ul class="mob-menu__nav">
+					<li>
+						<a href="#">О нас</a>
+					</li>
+					<li class="current-menu-item">
+						<a href="#">Предстоящие гонки</a>
+					</li>
+					<li>
+						<a href="#">Прошедшие гонки</a>
+					</li>
+					<li>
+						<a href="#">Trail блог</a>
+					</li>
+					<li>
+						<a href="#">Волонтерам </a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+				<div class="mob-menu__top">
+					<div class="mob-menu__social">
+						<a href="#" class="mob-menu__vk">
+							<img src="img/vk.svg" alt="вк">
+						</a>
+						<a href="#" class="mob-menu__inst">
+							<img src="img/instagram.svg" alt="инстаграмм">
+						</a>
+					</div>
+					<a href="tel:+78172580478" class="mob-menu__tel">+7 (8172) 58-04-78</a>
+					<a id="to-modal" class="mob-menu__btn">Заявка на участие</a>
+				</div>
+			</nav>
+		</div>
+
 		<header class="header">
 			<div class="header__container container">
 				<a href="#" class="header__logo">
@@ -29,7 +136,7 @@
 							</a>
 						</div>
 						<a href="tel:+78172580478" class="header__tel">+7 (8172) 58-04-78</a>
-						<a href="" class="header__btn">Заявка на участие</a>
+						<a id="to-modal" class="header__btn">Заявка на участие</a>
 					</div>
 					<ul class="header__nav">
 						<li>
@@ -604,7 +711,7 @@
 				</p>
 				<div class="footer__text-block">
 					<p class="footer__text footer-text">Все права защищены, копирование любых материалов запрещено.</p>
-					<a href="#" class="footer__privacy footer-text">Политика конфиденциальности</a>
+					<a id="to-privacy-footer" class="footer__privacy footer-text">Политика конфиденциальности</a>
 				</div>
 				<div class="footer__dev footer-text">Разработка сайта - <a href="#">Удобный интернет</a><br> 2020</div>
 			</div>
@@ -613,6 +720,8 @@
 	<script src="libs/jquery-3.4.1.min.js"></script>
 	<script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
 	<script src="libs/ofi.min.js"></script>
+	<script src="libs/jquery.inputmask.min.js"></script>
+	<script src="libs/jquery.fancybox.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

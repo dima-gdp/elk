@@ -66,7 +66,7 @@
 		margin-right: 50px;
 	}
 	.footer__logo {
-		flex: 1 0 120px;
+		flex: 0 0 120px;
 		height: 141px;
 	}
 }
@@ -113,6 +113,55 @@
 		padding: 10px 40px;
 		font-size: 17px;
 	}
+	.footer__container {
+		justify-content: space-between;
+	}
+	.footer__title {
+		flex: 0 1 50%;
+		max-width: none;
+		margin-right: 0;
+		padding: 0 15px;
+	}
+	.footer__text-block {
+		flex: 0 1 50%;
+		max-width: none;
+		margin-right: 0;
+		padding: 0 15px;
+	}
+	.footer__logo {
+		max-width: none;
+		flex: 0 1 50%;
+		height: 141px;
+		margin-right: 0;
+		padding: 0 15px;
+	}
+	.news__container {
+		position: relative;
+	}
+	.news__decor {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.news__men {
+		margin-left: auto;
+		margin-right: 0;
+	}
+	.news__content {
+		position: relative;
+		z-index: 2;
+	}
+	.news__ropes::before {
+		left: auto;
+		right: 30%;
+		padding-bottom: 18.3%;
+	}
+	.news__ropes::after {
+		padding-bottom: 53%;
+		right: 6%;
+	}
 }
 
 @media (max-width: 992px) {
@@ -143,6 +192,9 @@
 		padding: 10px 30px;
 		font-size: 16px;
 	}
+	.news__men {
+		display: none;
+	}
 }
 
 @media (max-width: 768px) {
@@ -154,13 +206,36 @@
 			display: none;
 		}
 	}
+	.header__title {
+		margin-right: 0;
+	}
+	.footer__title {
+		font-size: 22px;
+	}
+	.news__content {
+		flex: 1 1 auto;
+	}
+	.news__links {
+		flex-direction: column;
+		align-items: center;
+	}
+	.news__content {
+		padding-top: 50px;
+		padding-bottom: 80px;
+	}
+	.news__title {
+		margin-bottom: 30px;
+	}
+	.news__vk {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
 }
 
 @media (max-width: 576px) {
 	.header__title {
 		max-width: 224px;
 		padding-left: 20px;
-		margin-right: 0;
 	}
 	.header__logo {
 		margin-right: 0;
@@ -176,13 +251,54 @@
 	.tabs__item {
 		margin-bottom: 15px;
 		line-height: 1;
-		min-height: 50px;
+		min-height: 43px;
 		border-radius: 80px;
-		font-size: 14px;
+		font-size: 13px;
+		flex-grow: 1;
+	}
+
+	.tabs__item:not(:last-child) {
+		margin-right: 15px;
+	}
+
+	.tabs__item {
+		margin-right: 15px;
+	}
+
+	.footer__container {
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer__title {
+		padding: 0;
+	}
+	.footer__text-block {
+		padding: 0;
+	}
+	.footer__logo {
+		width: 153px;
+		flex: 0 0 141px;
+		padding: 0;
+	}
+	.footer__dev {
+		margin-bottom: 0;
+	}
+	.footer {
+		padding-bottom: 20px;
 	}
 }
 
 @media (max-width: 425px) {
+	.header__logo {
+		flex: 0 0 70px;
+	}
+	.header__title {
+		max-width: 209px;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 360px) {
 	.header__title {
 		display: none;
 	}
