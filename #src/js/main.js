@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	const vkHeight = $(window).width() > '1440' ? '447px' : '400px';
+	const vkHeight = $(window).width() > '1440' ? '447px' : $(window).width() > '425' ? '397px' : '297px';
 	const mobMenu = $('.mob-menu');
 	const burger = $('.header__burger');
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
 	})
 
 
-	$("#to-modal").on('click', function () {
+	$(".to-modal").on('click', function () {
 
 		$.fancybox.open({
 			src: '#modal',
