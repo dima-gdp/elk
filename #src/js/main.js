@@ -15,6 +15,63 @@ $(document).ready(function () {
 
 	objectFitImages();
 
+	const bg = parseInt($('.bg').css('bottom'));
+	const hill = parseInt($('.hill').css('bottom'));
+	const girl = parseInt($('.girl').css('bottom'));
+	const grime1 = parseInt($('.girl').css('grime1'))
+	const grime2 = parseInt($('.girl').css('grime2'))
+	const grime3 = parseInt($('.girl').css('grime3'))
+	const grime4 = parseInt($('.girl').css('grime4'))
+
+	// var scrollPos = 0;
+	// $(window).scroll(function () {
+	// 	var st = $(this).scrollTop();
+	// 	if (st > scrollPos) {
+	// 		console.log('vniz')
+	// 	} else {
+	// 		console.log('verh')
+	// 	}
+	// 	scrollPos = st;
+	// });
+
+	function parallax() {
+		let scrollPos = 0;
+		let a = $(document).scrollTop() + $(window).height() / 10,
+			b = $('.parallax__container').offset().top;
+
+
+		if (a >= b) {
+			console.log('wefwef')
+			let value = $(document).scrollTop() - b;
+
+			if (a > scrollPos) {
+				$('.girl').css('bottom', girl + value * 0.25)
+				$('.hill').css('bottom', girl - value * 0.05)
+
+			}
+			else {
+				$('.girl').css('bottom', girl - value * 0.25)
+				$('.hill').css('bottom', girl + value * 0.05)
+			}
+
+
+		}
+
+	}
+
+	const slider_first = new Swiper('.first__slider', {
+
+		slidesPerView: 1,
+		observer: true,
+		observeParents: true,
+		loop: false,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		},
+	});
+
 	$('ul.tabs__list').on('click', 'li:not(.active)', function () {
 		$(this).addClass('active').siblings().removeClass('active')
 			.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');
@@ -81,5 +138,6 @@ $(document).ready(function () {
 
 
 	$(window).on('scroll', animateSection);
+	$(window).on('scroll', parallax);
 
 })

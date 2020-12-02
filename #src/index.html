@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="libs/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="libs/swiper.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Вологодские лоси</title>
 </head>
@@ -168,11 +169,51 @@
 		</header>
 		<main class="main">
 			<section class="first">
-				<img src="img/first.jpg" alt="">
+				<div class="first__slider-container">
+					<div class="swiper-container first__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide-first" style="background-image: url('img/first.jpg');">
+								<div class="slide-first__container container">
+									<div class="slide-first__content">
+										<div class="slide-first__date">
+											<span class="slide-first__num">0</span>
+											<span class="slide-first__num">5</span>
+											<span class="slide-first__month">мая</span>
+										</div>
+										<p class="slide-first__season">сезон <span class="red">2021</span></p>
+										<a href="#" class="slide-first__btn">Регистрация</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide slide-first" style="background-image: url('img/first.jpg');">
+								<div class="slide-first__container container">
+									<div class="slide-first__content">
+										<div class="slide-first__date">
+											<span class="slide-first__num">0</span>
+											<span class="slide-first__num">5</span>
+											<span class="slide-first__month">сентября</span>
+										</div>
+										<p class="slide-first__season">сезон <span class="red">2021</span></p>
+										<a href="#" class="slide-first__btn">Регистрация</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
 			</section>
 
 			<section class="parallax">
-				<img src="img/parallax.png" alt="">
+				<div class="parallax__container">
+					<img src="img/bg-2.png" alt="" class="bg-2">
+					<img src="img/grime-2.png" class="grime-2" alt="">
+					<img src="img/grime-3.png" class="grime-3" alt="">
+					<img src="img/grime-1.png" class="grime-1" alt="">
+					<img src="img/grime-4.png" class="grime-4" alt="">
+					<img src="img/girl.png" alt="" class="girl">
+					<img src="img/hill.png" alt="" class="hill">
+				</div>
 			</section>
 
 			<section class="reasons">
@@ -243,7 +284,7 @@
 									<li class="events__column">
 										<div class="event">
 											<div class="event__top">
-												<span class="event__data">апреля <span class="red">. 2021</span></span>
+												<span class="event__data">сентября <span class="red">. 2021</span></span>
 												<div class="event__image">
 													<img src="img/tabs-photo.jpg" alt="фото">
 												</div>
@@ -658,7 +699,7 @@
 								<img src="img/kia.png" alt="">
 							</a>
 						</div>
-						<div class="partners__row">
+						<div class="partners__row partners__row--evenly">
 							<a href="#" class="partners__link">
 								<img src="img/reactor.png" alt="">
 							</a>
@@ -704,12 +745,14 @@
 
 		<footer class="footer">
 			<div class="footer__container container">
-				<a href="#" class="footer__logo">
-					<img src="img/logo.svg" alt="Логотип">
-				</a>
-				<p class="footer__title">
-					Спортивная гонка <br><span class="red">с препятствиями</span>
-				</p>
+				<div class="footer__left">
+					<a href="#" class="footer__logo">
+						<img src="img/logo.svg" alt="Логотип">
+					</a>
+					<p class="footer__title">
+						Спортивная гонка <br><span class="red">с препятствиями</span>
+					</p>
+				</div>
 				<div class="footer__text-block">
 					<p class="footer__text footer-text">Все права защищены, копирование любых материалов запрещено.</p>
 					<a id="to-privacy-footer" class="footer__privacy footer-text">Политика конфиденциальности</a>
@@ -722,6 +765,7 @@
 	<script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
 	<script src="libs/ofi.min.js"></script>
 	<script src="libs/jquery.inputmask.min.js"></script>
+	<script src="libs/swiper.min.js"></script>
 	<script src="libs/jquery.fancybox.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
