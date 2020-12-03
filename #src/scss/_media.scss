@@ -17,9 +17,64 @@
 	.news__ropes {
 		margin-right: 0;
 	}
-}
+	.first {
+		min-height: 900px;
+	}
+	.first .swiper-pagination-bullet {
+		width: 45px;
+	}
+	.first .swiper-pagination-bullet-active {
+		width: 100px;
+	}
+	.slide-first__num {
+		width: 80px;
+		height: 104px;
+		font-size: 87px;
+	}
+	.slide-first__month {
+		height: 104px;
+		padding: 0px 35px;
+		font-size: 84px;
+	}
 
-@media (max-width: 1501px) {
+	.slide-first__season {
+		font-size: 60px;
+	}
+	.slide-first__btn {
+		min-height: 76px;
+		width: 293px;
+		font-size: 26px;
+	}
+	.grime-2 {
+		top: 9.8%;
+		left: 83px;
+	}
+	.grime-3 {
+		bottom: 37px;
+		left: 17%;
+	}
+	.grime-1 {
+		top: 13px;
+		left: 0;
+	}
+	.grime-4 {
+		top: 23%;
+		left: 6%;
+	}
+	.hill {
+		bottom: 0;
+		left: 0;
+		max-width: 70%;
+	}
+	.bg-2 {
+		bottom: -7%;
+		left: 0;
+	}
+	.girl {
+		bottom: 37px;
+		left: 0;
+		max-width: 55%;
+	}
 }
 
 @media (max-width: 1440px) {
@@ -198,6 +253,35 @@
 	.partners__btn {
 		margin-top: 40px;
 	}
+	.first {
+		min-height: 800px;
+	}
+	.first .swiper-pagination-bullet {
+		width: 40px;
+	}
+	.first .swiper-pagination-bullet-active {
+		width: 90px;
+	}
+	.slide-first__num {
+		width: 70px;
+		height: 90px;
+		font-size: 72px;
+	}
+	.slide-first__month {
+		height: 90px;
+		font-size: 72px;
+		padding: 0px 27px;
+	}
+
+	.slide-first__season {
+		font-size: 54px;
+		margin-bottom: 17px;
+	}
+	.slide-first__btn {
+		min-height: 68px;
+		width: 270px;
+		font-size: 23px;
+	}
 }
 
 @media (max-width: 992px) {
@@ -246,6 +330,48 @@
 	.partners__link img {
 		max-width: 74%;
 	}
+	.slide-first::before {
+		display: block;
+	}
+	.slide-first__container {
+		justify-content: center;
+	}
+	.first .swiper-pagination-bullet {
+		width: 35px;
+	}
+	.first .swiper-pagination-bullet-active {
+		width: 70px;
+	}
+	.slide-first__num {
+		width: 60px;
+		height: 80px;
+		font-size: 63px;
+	}
+	.slide-first__month {
+		height: 80px;
+		font-size: 63px;
+		padding: 0px 20px;
+	}
+
+	.slide-first__season {
+		font-size: 45px;
+		margin-bottom: 17px;
+	}
+	.slide-first__btn {
+		min-height: 60px;
+		width: 255px;
+		font-size: 23px;
+	}
+	.hill {
+		bottom: 0;
+		left: 0;
+		max-width: 100%;
+	}
+	.girl {
+		bottom: 37px;
+		left: 0;
+		max-width: 70%;
+	}
 }
 
 @media (max-width: 768px) {
@@ -291,6 +417,34 @@
 	.news__ropes::before {
 		right: 57%;
 		padding-bottom: 26.3%;
+	}
+
+	.first .swiper-pagination-bullet {
+		width: 30px;
+		height: 7px;
+	}
+	.first .swiper-pagination-bullet-active {
+		width: 60px;
+	}
+	.slide-first__num {
+		width: 50px;
+		height: 70px;
+		font-size: 55px;
+	}
+	.slide-first__month {
+		height: 70px;
+		font-size: 55px;
+		padding: 0px 16px;
+	}
+
+	.slide-first__season {
+		font-size: 39px;
+		margin-bottom: 17px;
+	}
+	.slide-first__btn {
+		min-height: 50px;
+		width: 230px;
+		font-size: 20px;
 	}
 }
 
@@ -384,6 +538,26 @@
 	.events__list {
 		margin: 0px -19px 0px -19px;
 	}
+	.slide-first__num {
+		width: 42px;
+		height: 55px;
+		font-size: 43px;
+	}
+	.slide-first__month {
+		height: 55px;
+		font-size: 43px;
+		padding: 0px 14px;
+	}
+
+	.slide-first__season {
+		font-size: 34px;
+		margin-bottom: 15px;
+	}
+	.slide-first__btn {
+		min-height: 42px;
+		width: 194px;
+		font-size: 17px;
+	}
 }
 
 @media (max-width: 425px) {
@@ -454,6 +628,29 @@
 	.event__number {
 		margin-bottom: 5px;
 		font-size: 45px;
+	}
+
+	.first {
+		min-height: 600px;
+	}
+	.first .swiper-pagination {
+		bottom: 80px;
+	}
+	.slide-first__date {
+		margin-bottom: 0;
+	}
+	.slide-first__num {
+		margin-bottom: 15px;
+	}
+	.slide-first__month {
+		margin-bottom: 15px;
+	}
+	.first .swiper-pagination-bullet {
+		width: 20px;
+		height: 6px;
+	}
+	.first .swiper-pagination-bullet-active {
+		width: 40px;
 	}
 }
 

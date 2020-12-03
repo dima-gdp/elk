@@ -15,46 +15,40 @@ $(document).ready(function () {
 
 	objectFitImages();
 
-	const bg = parseInt($('.bg').css('bottom'));
+	const bg = parseInt($('.bg-2').css('bottom'));
 	const hill = parseInt($('.hill').css('bottom'));
 	const girl = parseInt($('.girl').css('bottom'));
-	const grime1 = parseInt($('.girl').css('grime1'))
-	const grime2 = parseInt($('.girl').css('grime2'))
-	const grime3 = parseInt($('.girl').css('grime3'))
-	const grime4 = parseInt($('.girl').css('grime4'))
+	const grime1 = parseInt($('.grime-1').css('top'))
+	const grime2 = parseInt($('.grime-2').css('top'))
+	const grime4 = parseInt($('.grime-3').css('top'))
 
-	// var scrollPos = 0;
-	// $(window).scroll(function () {
-	// 	var st = $(this).scrollTop();
-	// 	if (st > scrollPos) {
-	// 		console.log('vniz')
-	// 	} else {
-	// 		console.log('verh')
-	// 	}
-	// 	scrollPos = st;
-	// });
 
 	function parallax() {
 		let scrollPos = 0;
-		let a = $(document).scrollTop() + $(window).height() / 10,
-			b = $('.parallax__container').offset().top;
+		let offsetScroll = $(document).scrollTop() + $(window).height() / 2,
+			offsetBlock = $('.parallax__block').offset().top;
 
+		if (offsetScroll >= offsetBlock && offsetScroll < offsetBlock + $(window).height()) {
 
-		if (a >= b) {
-			console.log('wefwef')
-			let value = $(document).scrollTop() - b;
+			let value = $(document).scrollTop() - offsetBlock;
 
-			if (a > scrollPos) {
-				$('.girl').css('bottom', girl + value * 0.25)
-				$('.hill').css('bottom', girl - value * 0.05)
+			if (offsetScroll > scrollPos) {
+				$('.girl').css('bottom', girl + value * 0.16)
+				$('.bg-2').css('bottom', bg + value * 0.09)
+				$('.hill').css('bottom', hill - value * 0.05)
+				$('.grime-2').css('top', grime2 - value * 0.3)
+				$('.grime-1').css('top', grime1 - value * 0.25)
+				$('.grime-4').css('top', grime4 - value * 0.2)
 
 			}
 			else {
-				$('.girl').css('bottom', girl - value * 0.25)
-				$('.hill').css('bottom', girl + value * 0.05)
+				$('.girl').css('bottom', girl - value * 0.16)
+				$('.bg-2').css('bottom', bg - value * 0.09)
+				$('.hill').css('bottom', hill + value * 0.05)
+				$('.grime-2').css('top', grime2 + value * 0.3)
+				$('.grime-1').css('top', grime1 + value * 0.25)
+				$('.grime-4').css('top', grime4 + value * 0.2)
 			}
-
-
 		}
 
 	}
