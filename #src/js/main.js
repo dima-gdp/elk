@@ -25,29 +25,34 @@ $(document).ready(function () {
 
 	function parallax() {
 		let scrollPos = 0;
-		let offsetScroll = $(document).scrollTop() + $(window).height() / 2,
+		let offsetScroll = $(document).scrollTop() + $(window).height() / 4,
 			offsetBlock = $('.parallax__block').offset().top;
 
 		if (offsetScroll >= offsetBlock && offsetScroll < offsetBlock + $(window).height()) {
 
 			let value = $(document).scrollTop() - offsetBlock;
+			let ratio = 1;
+
+			if ($(window).width() < 1410) {
+				ratio = $(window).width() / 1410
+			}
 
 			if (offsetScroll > scrollPos) {
-				$('.girl').css('bottom', girl + value * 0.16)
-				$('.bg-2').css('bottom', bg + value * 0.09)
-				$('.hill').css('bottom', hill - value * 0.05)
-				$('.grime-2').css('top', grime2 - value * 0.3)
-				$('.grime-1').css('top', grime1 - value * 0.25)
-				$('.grime-4').css('top', grime4 - value * 0.2)
+				$('.girl').css('bottom', girl + value * 0.1 * ratio)
+				$('.bg-2').css('bottom', bg + value * 0.13 * ratio)
+				$('.hill').css('bottom', hill - value * 0.12 * ratio)
+				$('.grime-2').css('top', grime2 - value * 0.3 * ratio)
+				$('.grime-1').css('top', grime1 + value * 0.25 * ratio)
+				$('.grime-4').css('top', grime4 + value * 0.2 * ratio)
 
 			}
 			else {
-				$('.girl').css('bottom', girl - value * 0.16)
-				$('.bg-2').css('bottom', bg - value * 0.09)
-				$('.hill').css('bottom', hill + value * 0.05)
-				$('.grime-2').css('top', grime2 + value * 0.3)
-				$('.grime-1').css('top', grime1 + value * 0.25)
-				$('.grime-4').css('top', grime4 + value * 0.2)
+				$('.girl').css('bottom', girl - value * 0.1 * ratio)
+				$('.bg-2').css('bottom', bg - value * 0.13 * ratio)
+				$('.hill').css('bottom', hill + value * 0.12 * ratio)
+				$('.grime-2').css('top', grime2 + value * 0.3 * ratio)
+				$('.grime-1').css('top', grime1 - value * 0.25 * ratio)
+				$('.grime-4').css('top', grime4 - value * 0.2 * ratio)
 			}
 		}
 

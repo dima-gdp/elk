@@ -17,34 +17,14 @@
 	.news__ropes {
 		margin-right: 0;
 	}
-	.first {
-		min-height: 900px;
-	}
+
 	.first .swiper-pagination-bullet {
 		width: 45px;
 	}
 	.first .swiper-pagination-bullet-active {
 		width: 100px;
 	}
-	.slide-first__num {
-		width: 80px;
-		height: 104px;
-		font-size: 87px;
-	}
-	.slide-first__month {
-		height: 104px;
-		padding: 0px 35px;
-		font-size: 84px;
-	}
 
-	.slide-first__season {
-		font-size: 60px;
-	}
-	.slide-first__btn {
-		min-height: 76px;
-		width: 293px;
-		font-size: 26px;
-	}
 	.grime-2 {
 		top: 9.8%;
 		left: 83px;
@@ -64,15 +44,13 @@
 	.hill {
 		bottom: 0;
 		left: 0;
-		max-width: 70%;
+		max-width: 77%;
 	}
 	.bg-2 {
-		bottom: -7%;
+		// bottom: -7%;
 		left: 0;
 	}
 	.girl {
-		bottom: 37px;
-		left: 0;
 		max-width: 55%;
 	}
 }
@@ -253,34 +231,37 @@
 	.partners__btn {
 		margin-top: 40px;
 	}
-	.first {
-		min-height: 800px;
-	}
+
 	.first .swiper-pagination-bullet {
 		width: 40px;
 	}
 	.first .swiper-pagination-bullet-active {
 		width: 90px;
 	}
+	.girl {
+		max-width: 55%;
+	}
+	.parallax {
+		min-height: 1000px;
+		padding-top: 70px;
+	}
 	.slide-first__num {
 		width: 70px;
-		height: 90px;
-		font-size: 72px;
+		height: 89px;
+		font-size: 65px;
 	}
 	.slide-first__month {
-		height: 90px;
-		font-size: 72px;
-		padding: 0px 27px;
+		height: 89px;
+		font-size: 65px;
+		padding: 0px 35px;
 	}
-
 	.slide-first__season {
-		font-size: 54px;
-		margin-bottom: 17px;
+		margin-bottom: 44px;
+		font-size: 55px;
 	}
 	.slide-first__btn {
-		min-height: 68px;
-		width: 270px;
-		font-size: 23px;
+		min-height: 74px;
+		width: 282px;
 	}
 }
 
@@ -342,35 +323,25 @@
 	.first .swiper-pagination-bullet-active {
 		width: 70px;
 	}
-	.slide-first__num {
-		width: 60px;
-		height: 80px;
-		font-size: 63px;
-	}
-	.slide-first__month {
-		height: 80px;
-		font-size: 63px;
-		padding: 0px 20px;
-	}
 
-	.slide-first__season {
-		font-size: 45px;
-		margin-bottom: 17px;
-	}
-	.slide-first__btn {
-		min-height: 60px;
-		width: 255px;
-		font-size: 23px;
-	}
 	.hill {
 		bottom: 0;
 		left: 0;
 		max-width: 100%;
 	}
 	.girl {
-		bottom: 37px;
 		left: 0;
 		max-width: 70%;
+	}
+	.parallax__content {
+		padding-top: 0;
+		margin-left: 0;
+	}
+	.title--b {
+		font-size: 40px;
+	}
+	.parallax__title {
+		margin-bottom: 50px;
 	}
 }
 
@@ -426,25 +397,54 @@
 	.first .swiper-pagination-bullet-active {
 		width: 60px;
 	}
+	.title--b {
+		font-size: 36px;
+	}
+	.parallax {
+		min-height: 880px;
+	}
+	.grime-2 {
+		left: 0;
+	}
+	.grime-3 {
+		left: 0;
+	}
+	.grime-4 {
+		left: 0;
+	}
+	.parallax__subtitle {
+		font-size: 18px;
+	}
+	.parallax__link {
+		font-size: 15px;
+	}
+	.girl {
+		bottom: 0;
+	}
+	.hill {
+		bottom: -10px;
+	}
+	.bg-2 {
+		bottom: -55px;
+	}
 	.slide-first__num {
-		width: 50px;
-		height: 70px;
-		font-size: 55px;
+		width: 61px;
+		height: 80px;
+		font-size: 52px;
 	}
 	.slide-first__month {
-		height: 70px;
-		font-size: 55px;
-		padding: 0px 16px;
+		height: 80px;
+		font-size: 52px;
+		padding: 0px 25px;
 	}
-
 	.slide-first__season {
-		font-size: 39px;
-		margin-bottom: 17px;
+		margin-bottom: 40px;
+		font-size: 50px;
 	}
 	.slide-first__btn {
-		min-height: 50px;
-		width: 230px;
-		font-size: 20px;
+		min-height: 74px;
+		width: 265px;
+		font-size: 21px;
 	}
 }
 
@@ -538,25 +538,58 @@
 	.events__list {
 		margin: 0px -19px 0px -19px;
 	}
+	.hill {
+		width: 577px;
+		max-width: none;
+		bottom: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.girl {
+		width: 403px;
+		max-width: none;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.bg-2 {
+		width: 700px;
+		max-width: none;
+	}
+	.parallax__subtitle {
+		font-size: 17px;
+	}
+	.parallax {
+		min-height: 770px;
+	}
+	.parallax__title {
+		margin-bottom: 40px;
+	}
+	.grime-1,
+	.grime-2,
+	.grime-3,
+	.grime-4 {
+		opacity: 0;
+		visibility: hidden;
+	}
 	.slide-first__num {
-		width: 42px;
-		height: 55px;
-		font-size: 43px;
+		width: 56px;
+		height: 75px;
+		font-size: 50px;
 	}
 	.slide-first__month {
-		height: 55px;
-		font-size: 43px;
-		padding: 0px 14px;
+		height: 75px;
+		font-size: 50px;
+		padding: 0px 23px;
 	}
-
 	.slide-first__season {
-		font-size: 34px;
-		margin-bottom: 15px;
+		margin-bottom: 40px;
+		font-size: 47px;
+		line-height: 1.2;
 	}
 	.slide-first__btn {
-		min-height: 42px;
-		width: 194px;
-		font-size: 17px;
+		min-height: 65px;
+		width: 255px;
+		font-size: 20px;
 	}
 }
 
@@ -630,27 +663,39 @@
 		font-size: 45px;
 	}
 
-	.first {
-		min-height: 600px;
-	}
-	.first .swiper-pagination {
-		bottom: 80px;
-	}
 	.slide-first__date {
 		margin-bottom: 0;
 	}
-	.slide-first__num {
-		margin-bottom: 15px;
-	}
-	.slide-first__month {
-		margin-bottom: 15px;
-	}
+
 	.first .swiper-pagination-bullet {
 		width: 20px;
 		height: 6px;
 	}
 	.first .swiper-pagination-bullet-active {
 		width: 40px;
+	}
+	.parallax__subtitle {
+		font-size: 16px;
+	}
+	.slide-first__num {
+		width: 50px;
+		height: 65px;
+		font-size: 40px;
+	}
+	.slide-first__month {
+		height: 65px;
+		font-size: 40px;
+		padding: 0px 20px;
+	}
+	.slide-first__season {
+		margin-bottom: 40px;
+		font-size: 37px;
+		line-height: 1.2;
+	}
+	.slide-first__btn {
+		min-height: 55px;
+		width: 240px;
+		font-size: 16px;
 	}
 }
 
