@@ -524,7 +524,7 @@
 // Reasons =============================================================================================
 
 .reasons {
-	padding-top: 157px;
+	padding-top: 131px;
 	padding-bottom: 93px;
 	// .reasons__container
 	&__container {
@@ -534,18 +534,34 @@
 	// .reasons__left
 	&__left {
 		position: relative;
+		margin-top: 151px;
+		margin-right: 50px;
 	}
 	// .reasons__number
 	&__number {
+		position: absolute;
+		top: -10%;
+		left: 0;
+		width: 290px;
+		height: 372px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
 	}
 	// .reasons__right
 	&__right {
 		max-width: 782px;
 	}
 	&__title {
+		margin-left: 140px;
 		max-width: 477px;
 		position: relative;
 		z-index: 1;
+		span {
+			font-size: 64px;
+			display: block;
+			margin-bottom: 13px;
+		}
 	}
 	// .reasons__list
 	&__list {
@@ -879,11 +895,7 @@
 		line-height: 1.5;
 		letter-spacing: 0.05em;
 		color: #2c2c2c;
-
-		&:not(:last-child) {
-			margin-bottom: 27px;
-		}
-
+		margin-bottom: 27px;
 		&--bold {
 			font-weight: bold;
 		}
@@ -939,7 +951,7 @@
 			animation-delay: 2s;
 		}
 
-		// animation-name: logo;
+		animation-name: logo;
 		animation-duration: 6s;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in;
