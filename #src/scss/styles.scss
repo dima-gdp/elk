@@ -544,9 +544,19 @@
 		left: 0;
 		width: 290px;
 		height: 372px;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+		#image0 {
+			animation: five 20s linear infinite alternate;
+		}
+
+		@keyframes five {
+			100% {
+				transform: translate(-90%, -90%);
+			}
+		}
 	}
 	// .reasons__right
 	&__right {
@@ -749,8 +759,12 @@
 	height: 100%;
 	padding: 30px 30px 40px 30px;
 	background: #ffffff;
-	box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.4s;
 	position: relative;
+	&:hover {
+		box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+	}
+	
 
 	&--past {
 		&::after {
@@ -931,31 +945,36 @@
 		flex: 1 1 auto;
 		margin-right: calc((100vw - 100%) / -2);
 		overflow: hidden;
+		position: relative;
+		&::after {
+		content: '';
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 height: 100%;
+		 width: 70px;
+		 background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		}
 	}
 	// .partners__row
 	&__row {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		transform: translateX(100%);
 		position: relative;
+		overflow: hidden;
+		height: 190px;
+		width: 100%;
 
-		&:nth-child(1) {
+		&:nth-child(2){
+			.partners__moving-block {
+				justify-content: space-evenly;
+				animation-timing-function: ease-in-out;
+			}
 		}
-
-		&:nth-child(2) {
-			animation-delay: 1s;
+		&:nth-child(3){
+			.partners__moving-block {
+				animation-timing-function: ease-in;
+			}
 		}
-
-		&:nth-child(3) {
-			animation-delay: 2s;
-		}
-
-		animation-name: logo;
-		animation-duration: 6s;
-		animation-iteration-count: infinite;
-		animation-timing-function: ease-in;
-
+		
 		&:not(:last-child) {
 			margin-bottom: 62px;
 		}
@@ -964,8 +983,34 @@
 			justify-content: space-evenly;
 		}
 	}
+
+	&__moving-block {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		animation-name: logo;
+		animation-duration: 6s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		&--helper {
+			left: 100%;
+		}
+	}
 	// .partners__link
 	&__link {
+		height: 100%;
+		width: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-height: 100%;
+			padding: 0px 40px 0px 40px;
+		}
 	}
 }
 
@@ -1026,7 +1071,7 @@
 			background: url("../img/rope-1.png") 0 0 / contain no-repeat;
 			transform-origin: top center;
 			transform: rotate(-20deg);
-			animation: rope 2s ease-in-out infinite alternate;
+			animation: rope 3.3s ease-in-out infinite alternate;
 		}
 		&::after {
 			content: "";

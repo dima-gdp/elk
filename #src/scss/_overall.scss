@@ -59,18 +59,10 @@ body {
 
 @keyframes logo {
 	0% {
-	}
-	98% {
-		transform: translateX(-105%);
-		opacity: 1;
-	}
-	99% {
-		transform: translateX(-105%);
-		opacity: 0;
+		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(100%);
-		opacity: 0;
+		transform: translateX(-100%);
 	}
 }
 

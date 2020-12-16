@@ -58,6 +58,23 @@ $(document).ready(function () {
 
 	}
 
+
+	// Ширина блоков с логотипами
+	const partnersRow = $('.partners__row');
+	partnersRow.each(function(i, el){
+		let maxWidth = 0;
+
+		$(el).find('.partners__moving-block').each(function(i, el){
+			if ($(el).innerWidth() > maxWidth){
+				maxWidth = $(el).innerWidth()
+			}
+		})
+
+		$(el).find('.partners__moving-block').css('min-width', `${maxWidth}px`);
+		$(el).find('.partners__moving-block--helper').css('left', `${maxWidth}px`);
+	})
+	
+
 	const slider_first = new Swiper('.first__slider', {
 
 		slidesPerView: 1,
