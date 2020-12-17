@@ -339,16 +339,6 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.2);
-		display: none;
-	}
 	// .slide-first__container
 	&__container {
 		display: flex;
@@ -366,10 +356,11 @@
 	}
 	// .slide-first__date
 	&__date {
+		margin-bottom: 20px;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: flex-start;
 	}
 	// .slide-first__num
 	&__num {
@@ -377,7 +368,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 75px;
-		margin-bottom: 20px;
+		// margin-bottom: 20px;
 		height: 104px;
 		background: #e31e24;
 		font-family: "Russo One";
@@ -393,9 +384,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 104px;
+		min-height: 104px;
 		padding: 0px 42px;
-		margin-bottom: 20px;
+		// margin-bottom: 20px;
 		background: #e31e24;
 		font-family: "Russo One";
 		font-size: 70px;
@@ -513,12 +504,14 @@
 .bg-2 {
 	bottom: -113px;
 	left: 0;
-	width: 100%;
+	max-width: unset;
 }
 .girl {
-	bottom: 37px;
+	bottom: 90px;
+	// bottom: 37px;
 	left: -30px;
 	transition: transform 0.15s;
+	max-width: 760px;
 }
 
 // Reasons =============================================================================================
@@ -952,8 +945,8 @@
 		 top: 0;
 		 left: 0;
 		 height: 100%;
-		 width: 70px;
-		 background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+		 width: 100px;
+		 background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
 		}
 	}
 	// .partners__row
@@ -1030,6 +1023,8 @@
 	// .news__links
 	&__links {
 		display: flex;
+		position: relative;
+		z-index: 4;
 	}
 	// .news__title
 	&__title {
@@ -1072,6 +1067,7 @@
 			transform-origin: top center;
 			transform: rotate(-20deg);
 			animation: rope 3.3s ease-in-out infinite alternate;
+			z-index: 1;
 		}
 		&::after {
 			content: "";
@@ -1085,6 +1081,7 @@
 			transform-origin: top center;
 			transform: rotate(-10deg);
 			animation: rope-2 2s ease-in-out 0.5s infinite alternate;
+			z-index: 1;
 		}
 	}
 	// .news__men
@@ -1095,7 +1092,7 @@
 		margin-bottom: -100px;
 		transition: transform 2s ease;
 		position: relative;
-		z-index: 1;
+		z-index: 0;
 		&.transform {
 			transform: translateX(100px);
 		}

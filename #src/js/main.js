@@ -81,11 +81,15 @@ $(document).ready(function () {
 		observer: true,
 		observeParents: true,
 		loop: false,
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'bullets',
-			clickable: true
-		},
+		breakpoints: {
+			577: {
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				},
+			}
+		}
 	});
 
 	$('ul.tabs__list').on('click', 'li:not(.active)', function () {
