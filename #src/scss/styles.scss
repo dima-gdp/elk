@@ -443,7 +443,7 @@
 		overflow: hidden;
 		img {
 			position: absolute;
-			transition: top 0.2s, bottom 0.2s;
+			transition: top 0.3s, bottom 0.3s;
 		}
 	}
 
@@ -498,7 +498,8 @@
 	left: 108px;
 }
 .hill {
-	bottom: 0;
+	bottom: -30px;
+	// bottom: 0;
 	left: 0;
 }
 .bg-2 {
@@ -507,11 +508,13 @@
 	max-width: unset;
 }
 .girl {
-	bottom: 90px;
+	bottom: 60px;
+	left: -117px;
 	// bottom: 37px;
-	left: -30px;
+	// left: -30px;
 	transition: transform 0.15s;
-	max-width: 760px;
+	max-width: 1017px;
+	// max-width: 760px;
 }
 
 // Reasons =============================================================================================
@@ -939,15 +942,15 @@
 		margin-right: calc((100vw - 100%) / -2);
 		overflow: hidden;
 		position: relative;
-		&::after {
-		content: '';
-		 position: absolute;
-		 top: 0;
-		 left: 0;
-		 height: 100%;
-		 width: 100px;
-		 background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
-		}
+		// &::after {
+		// content: '';
+		//  position: absolute;
+		//  top: 0;
+		//  left: 0;
+		//  height: 100%;
+		//  width: 100px;
+		//  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%);
+		// }
 	}
 	// .partners__row
 	&__row {

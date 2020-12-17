@@ -25,10 +25,10 @@ $(document).ready(function () {
 
 	function parallax() {
 		let scrollPos = 0;
-		let offsetScroll = $(document).scrollTop() + $(window).height() / 4,
+		let offsetScroll = $(document).scrollTop() + $(window).height() / 3,
 			offsetBlock = $('.parallax__block').offset().top;
 
-		if (offsetScroll >= offsetBlock && offsetScroll < offsetBlock + $(window).height()) {
+		if (offsetScroll >= offsetBlock && offsetScroll < offsetBlock + $(window).height() / 1.2) {
 
 			let value = $(document).scrollTop() - offsetBlock;
 			let ratio = 1;
