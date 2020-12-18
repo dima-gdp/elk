@@ -8,7 +8,8 @@ const path = {
 		js: project_folder + "/js/",
 		img: project_folder + "/img/",
 		fonts: project_folder + "/fonts/",
-		icons: project_folder + "/svg/"
+		icons: project_folder + "/svg/",
+		favicon: project_folder + "/favicon/",
 	},
 	src: {
 		html: source_folder + "/*.html",
@@ -17,14 +18,16 @@ const path = {
 		js: [source_folder + "/js/*.js", "!" + source_folder + "/js/_*.js"],
 		img: source_folder + "/img/**/*.{jpg,png,webp,svg,gif}",
 		fonts: source_folder + "/fonts/*.ttf",
-		icons: source_folder + "/svg/*.svg"
+		icons: source_folder + "/svg/*.svg",
+		favicon: source_folder + "/favicon/*",
 	},
 	watch: {
 		html: source_folder + "/**/*.html",
 		css: source_folder + "/scss/**/*.scss",
 		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.{jpg,png,webp,svg,gif}",
-		icons: source_folder + "/svg/*.svg"
+		icons: source_folder + "/svg/*.svg",
+		favicon: source_folder + "/favicon/*",
 	},
 	clean: './' + project_folder + "/"
 };
@@ -108,6 +111,13 @@ function fonts() {
 		.pipe(dest(path.build.fonts))
 }
 
+function favicon() {
+	return src(path.src.favicon)
+		.pipe(dest(path.build.favicon))
+		.pipe(browsersync.stream())
+}
+
+
 function watchingFiles() {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css_dev);
@@ -120,9 +130,10 @@ function clean() {
 	return del(path.clean);
 }
 
-const dev = gulp.series(clean, libs, fonts, images_dev, svg, gulp.parallel(html, css_dev, js_dev, watchingFiles, browserSync));
-const build = gulp.series(clean, libs, fonts, images_build, svg, gulp.parallel(html, css_dev, js_dev));
+const dev = gulp.series(clean, libs, fonts, favicon, images_dev, svg, gulp.parallel(html, css_dev, js_dev, watchingFiles, browserSync));
+const build = gulp.series(clean, libs, fonts, favicon, images_build, svg, gulp.parallel(html, css_dev, js_dev));
 
+exports.favicon = favicon;
 exports.svg = svg;
 exports.libs = libs;
 exports.fonts = fonts;

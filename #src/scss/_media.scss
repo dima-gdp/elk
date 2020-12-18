@@ -42,8 +42,6 @@
 		left: 6%;
 	}
 	.hill {
-		bottom: 0;
-		left: 0;
 		max-width: 77%;
 	}
 	.bg-2 {
@@ -56,6 +54,9 @@
 	.reasons__right {
 		max-width: 50%;
 	}
+}
+
+@media (max-width: 1549px) {
 }
 
 @media (max-width: 1440px) {
@@ -114,11 +115,11 @@
 		margin-right: 90px;
 	}
 	.partners__link {
-    width: 250px;
-}
-.partners__row {
-	height: 140px;
-}
+		width: 250px;
+	}
+	.partners__row {
+		height: 140px;
+	}
 	.reasons__title {
 		margin-left: 46px;
 	}
@@ -126,15 +127,14 @@
 		top: -19%;
 	}
 	.parallax {
-    padding-top: 90px;
-}
-.girl {
-	bottom: -60px;
-}
-.hill {
-	bottom: -25px;
-}
-
+		padding-top: 90px;
+	}
+	.girl {
+		bottom: -60px;
+	}
+	.hill {
+		bottom: -25px;
+	}
 }
 
 @media (max-width: 1200px) {
@@ -240,17 +240,17 @@
 		padding-bottom: 100px;
 	}
 	.partners__row:not(:last-child) {
-    margin-bottom: 40px;
-}
-.partners__link img {
-	padding: 0px 30px 0px 30px;
-}
-.partners__row {
-	height: 125px;
-}
-.partners__link {
-	width: 170px;
-}
+		margin-bottom: 40px;
+	}
+	.partners__link img {
+		padding: 0px 30px 0px 30px;
+	}
+	.partners__row {
+		height: 125px;
+	}
+	.partners__link {
+		width: 170px;
+	}
 	.partners__content {
 		margin-right: 5%;
 		max-width: 470px;
@@ -370,11 +370,11 @@
 	.partners__link {
 		width: 190px;
 		flex: 0 0 190px;
-}
-.partners__row {
-	height: 100px;
-}
-	
+	}
+	.partners__row {
+		height: 100px;
+	}
+
 	.slide-first::before {
 		display: block;
 	}
@@ -608,16 +608,10 @@
 	}
 	.hill {
 		max-width: 577px;
-		// bottom: -30px;
-		// left: 50%;
-		// transform: translateX(-50%);
 	}
 	.girl {
 		max-width: 608px;
 		bottom: 0;
-		// max-width: none;
-		// left: 50%;
-		// transform: translateX(-50%);
 	}
 	.bg-2 {
 		max-width: 1000px;
@@ -642,24 +636,24 @@
 		min-height: 500px;
 	}
 	.first .swiper-pagination {
-    display: none;
-}
-.slide-first__content {
-padding-left: 0;
-	padding-top: 30px;
-	padding-bottom: 40px;
-}
-.slide-first__date {
-	margin-bottom: 20px;
-}
+		display: none;
+	}
+	.slide-first__content {
+		padding-left: 0;
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+	.slide-first__date {
+		margin-bottom: 20px;
+	}
 	.slide-first__num {
 		width: 43px;
 		height: 65px;
 		font-size: 50px;
 	}
 	.slide-first__num:not(:last-child) {
-    margin-right: 5px;
-}
+		margin-right: 5px;
+	}
 	.slide-first__month {
 		min-height: 65px;
 		font-size: 30px;
@@ -694,18 +688,18 @@ padding-left: 0;
 		padding-bottom: 60px;
 	}
 	.partners__row:not(:last-child) {
-    margin-bottom: 25px;
-}
-.partners__row {
-	height: 80px;
-}
+		margin-bottom: 25px;
+	}
+	.partners__row {
+		height: 80px;
+	}
 	.partners__link {
 		width: 140px;
 		flex: 0 0 140px;
-}
-// .partners__animate::after {
-// 	width: 60px;
-// }
+	}
+	// .partners__animate::after {
+	// 	width: 60px;
+	// }
 	.reasons__number {
 		height: 183px;
 	}
@@ -793,7 +787,7 @@ padding-left: 0;
 	.parallax__subtitle {
 		font-size: 16px;
 	}
-	
+
 	.reasons {
 		padding-top: 50px;
 		padding-bottom: 50px;
@@ -813,15 +807,15 @@ padding-left: 0;
 		font-size: 29px;
 	}
 	.hill {
-    max-width: 460px;
-}
-.girl {
-	max-width: 510px;
-	bottom: 0;
-}
-.parallax__title {
-	margin-bottom: 25px;
-}
+		max-width: 460px;
+	}
+	.girl {
+		max-width: 510px;
+		bottom: 0;
+	}
+	.parallax__title {
+		margin-bottom: 25px;
+	}
 }
 
 @media (max-width: 360px) {
@@ -855,27 +849,27 @@ padding-left: 0;
 		max-width: 100%;
 	}
 	.slide-first__month {
-    min-height: 55px;
-    font-size: 26px;
-    padding: 0px 12px;
-}
-.slide-first__num:not(:last-child) {
-	margin-right: 3px;
-}
-.slide-first__date {
-	margin-bottom: 15px;
-}
-.slide-first__season {
-	font-size: 27px;
-}
-.slide-first__btn {
-	min-height: 57px;
-	width: 240px;
-	font-size: 20px;
-}
-.slide-first__num {
-	width: 39px;
-	height: 55px;
-	font-size: 42px;
-}
+		min-height: 55px;
+		font-size: 26px;
+		padding: 0px 12px;
+	}
+	.slide-first__num:not(:last-child) {
+		margin-right: 3px;
+	}
+	.slide-first__date {
+		margin-bottom: 15px;
+	}
+	.slide-first__season {
+		font-size: 27px;
+	}
+	.slide-first__btn {
+		min-height: 57px;
+		width: 240px;
+		font-size: 20px;
+	}
+	.slide-first__num {
+		width: 39px;
+		height: 55px;
+		font-size: 42px;
+	}
 }
