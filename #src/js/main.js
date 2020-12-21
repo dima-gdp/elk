@@ -120,17 +120,6 @@ $(document).ready(function () {
 	})
 
 
-	$(".to-modal").on('click', function () {
-
-		$.fancybox.open({
-			src: '#modal',
-			touch: 'false',
-			smallBtn: false,
-			buttons: '',
-		});
-
-	});
-
 	$("#to-privacy").on('click', function () {
 
 		$.fancybox.open({
