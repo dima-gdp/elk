@@ -61,11 +61,11 @@ $(document).ready(function () {
 
 	// Ширина блоков с логотипами
 	const partnersRow = $('.partners__row');
-	partnersRow.each(function(i, el){
+	partnersRow.each(function (i, el) {
 		let maxWidth = 0;
 
-		$(el).find('.partners__moving-block').each(function(i, el){
-			if ($(el).innerWidth() > maxWidth){
+		$(el).find('.partners__moving-block').each(function (i, el) {
+			if ($(el).innerWidth() > maxWidth) {
 				maxWidth = $(el).innerWidth()
 			}
 		})
@@ -73,7 +73,22 @@ $(document).ready(function () {
 		$(el).find('.partners__moving-block').css('min-width', `${maxWidth}px`);
 		$(el).find('.partners__moving-block--helper').css('left', `${maxWidth}px`);
 	})
-	
+
+	// Ширина блоков с фотками
+	// const evAboutRow = $('.ev-about__row');
+	// evAboutRow.each(function (i, el) {
+	// 	let maxWidth = 0;
+
+	// 	$(el).find('.ev-about__moving-block').each(function (i, el) {
+	// 		if ($(el).innerWidth() > maxWidth) {
+	// 			maxWidth = $(el).innerWidth()
+	// 		}
+	// 	})
+
+	// 	$(el).find('.ev-about__moving-block').css('min-width', `${maxWidth}px`);
+	// 	$(el).find('.ev-about__moving-block--helper').css('left', `${maxWidth}px`);
+	// })
+
 
 	const slider_first = new Swiper('.first__slider', {
 
@@ -97,8 +112,9 @@ $(document).ready(function () {
 			.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');
 	})
 
-	VK.Widgets.Group("vk-group", { mode: 4, height: vkHeight, width: 'auto', wide: 1, no_cover: 1 }, 186419904);
-
+	if (document.getElementById('vk-group')) {
+		VK.Widgets.Group("vk-group", { mode: 4, height: vkHeight, width: 'auto', wide: 1, no_cover: 1 }, 186419904);
+	}
 
 	burger.click(function () {
 		mobMenu.addClass('active')
@@ -146,7 +162,11 @@ $(document).ready(function () {
 	$('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
 
-	$(window).on('scroll', animateSection);
-	$(window).on('scroll', parallax);
+	if (document.querySelector('.parallax__block')) {
+		$(window).on('scroll', animateSection);
+		$(window).on('scroll', parallax);
+	}
+
+
 
 })

@@ -57,6 +57,22 @@ body {
 	width: 100%;
 }
 
+.main {
+	flex: 1 1 auto;
+	&--grey {
+		background-color: #f4f4f4;
+	}
+}
+
+.date {
+	color: #d60007;
+	letter-spacing: 0.05em;
+}
+
+.tlg {
+	color: #5e81a8;
+}
+
 @keyframes logo {
 	0% {
 		transform: translateX(0);
