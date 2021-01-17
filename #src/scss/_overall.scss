@@ -62,6 +62,50 @@ body {
 	&--grey {
 		background-color: #f4f4f4;
 	}
+	&--eb {
+		background-color: #ebebeb;
+	}
+}
+
+.trail-block {
+	display: flex;
+	flex-direction: column;
+	// .trail-block__date
+	&__date {
+		font-size: 14px;
+		margin-bottom: 30px;
+	}
+	// .trail-block__link-title
+	&__link-title {
+		margin-bottom: 26px;
+	}
+	// .trail-block__title
+	&__title {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: lh(30, 20);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #000;
+	}
+	// .trail-block__subtitle
+	&__subtitle {
+		margin-bottom: 27px;
+		font-size: 16px;
+		line-height: lh(26, 16);
+		letter-spacing: 0.05em;
+	}
+	// .trail-block__more
+	&__more {
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: #d60007;
+	}
+	&__tlg {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
 }
 
 .date {

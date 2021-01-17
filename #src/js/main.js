@@ -107,10 +107,14 @@ $(document).ready(function () {
 		}
 	});
 
-	$('ul.tabs__list').on('click', 'li:not(.active)', function () {
-		$(this).addClass('active').siblings().removeClass('active')
-			.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');
-	})
+	if (document.querySelector('.events')) {
+		$('ul.tabs__list').on('click', 'li:not(.active)', function () {
+			$(this).addClass('active').siblings().removeClass('active')
+				.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');
+		})
+	}
+
+
 
 	if (document.getElementById('vk-group')) {
 		VK.Widgets.Group("vk-group", { mode: 4, height: vkHeight, width: 'auto', wide: 1, no_cover: 1 }, 186419904);
