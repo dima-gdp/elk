@@ -4,6 +4,20 @@ $(document).ready(function () {
 	const mobMenu = $('.mob-menu');
 	const burger = $('.header__burger');
 
+	$('.tabs__select--1').select2({
+		width: '100%',
+		placeholder: 'ФИО или номер',
+	});
+	$('.tabs__select--2').select2({
+		width: '100%',
+		placeholder: 'Возрастная группа',
+	});
+	$('.tabs__select--3').select2({
+		width: '100%',
+		placeholder: 'Регион',
+	});
+
+
 	function animateSection() {
 		let a = $(document).scrollTop() + $(window).height() / 2,
 			b = $('.news').offset().top;
@@ -75,19 +89,19 @@ $(document).ready(function () {
 	})
 
 	// Ширина блоков с фотками
-	// const evAboutRow = $('.ev-about__row');
-	// evAboutRow.each(function (i, el) {
-	// 	let maxWidth = 0;
+	const evAboutRow = $('.ev-about__row');
+	evAboutRow.each(function (i, el) {
+		let maxWidth = 0;
 
-	// 	$(el).find('.ev-about__moving-block').each(function (i, el) {
-	// 		if ($(el).innerWidth() > maxWidth) {
-	// 			maxWidth = $(el).innerWidth()
-	// 		}
-	// 	})
+		$(el).find('.ev-about__moving-block').each(function (i, el) {
+			if ($(el).innerWidth() > maxWidth) {
+				maxWidth = $(el).innerWidth()
+			}
+		})
 
-	// 	$(el).find('.ev-about__moving-block').css('min-width', `${maxWidth}px`);
-	// 	$(el).find('.ev-about__moving-block--helper').css('left', `${maxWidth}px`);
-	// })
+		$(el).find('.ev-about__moving-block').css('min-width', `${maxWidth}px`);
+		$(el).find('.ev-about__moving-block--helper').css('left', `${maxWidth}px`);
+	})
 
 
 	const slider_first = new Swiper('.first__slider', {
@@ -107,7 +121,7 @@ $(document).ready(function () {
 		}
 	});
 
-	if (document.querySelector('.events')) {
+	if (document.querySelector('.events') || document.querySelector('.members__tabs')) {
 		$('ul.tabs__list').on('click', 'li:not(.active)', function () {
 			$(this).addClass('active').siblings().removeClass('active')
 				.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');

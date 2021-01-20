@@ -1,0 +1,33 @@
+.rule {
+	position: relative;
+	// .rule__container
+	&__container {
+	}
+	&__top {
+		margin-bottom: 31px;
+	}
+	// .rule__main
+	&__main {
+	}
+	// .rule__text
+	&__text {
+		padding-bottom: 140px;
+		p,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		ul,
+		ol,
+		table {
+			margin-bottom: 20px;
+			@media (max-width: 992px) {
+				@include adaptiv(margin-bottom, 20, 15, 992, 320);
+			}
+		}
+	}
+	// .rule__aside
+	&__aside {
+	}
+}

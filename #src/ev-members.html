@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="libs/jquery.fancybox.min.css">
   <link rel="stylesheet" href="libs/swiper.min.css">
+  <link rel="stylesheet" href="libs/select2.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
@@ -215,9 +216,9 @@
     </header>
     <main class="main main--grey">
 
-      <section class=" about-ev">
-        <div class="about-ev__container container">
-          <div class="about-ev__main">
+      <section class="members ev-sect">
+        <div class="members__container container ev-cont">
+          <div class="members__main main-ev">
             <div class="breadcrumbs">
               <div class="breadcrumbs__container">
                 <span>
@@ -231,65 +232,89 @@
                 </span>
               </div>
             </div>
-            <div class="about-ev__top top-ev">
+            <div class="members__top top-ev">
               <h1 class="top-ev__title title">Вологодские лоси. <span class="red">Сезон 2021</span></h1>
-              <p class="top-ev__subtitle">О событии</p>
+              <p class="top-ev__subtitle">Список участников</p>
+              <a href="#" class="top-ev__link">Скачать PDF</a>
             </div>
-            <div class="about-ev__text type-style">
-              <p><b>15 мая 2021 г состоится самое яркое спортивное меромриятие!</b></p>
-              <p>Гонки с препятствиями, или obstacle races, – явление современное и крайне увлекательное. Если вы хотите
-                испытать волю, смелость и физическую силу – вам понравится такой вид спорта.</p>
-            </div>
-            <div class="about-ev__grid">
-              <div class="about-ev__column">
-                <div class="about-ev__item item-about">
-                  <p class="item-about__title">НА ТРАССЕ:</p>
-                  <ul class="item-about__list">
-                    <li class="item-about__item">Рукоходы</li>
-                    <li class="item-about__item">Канаты и канатные дороги</li>
-                    <li class="item-about__item">Препятствия с дымовыми завесами и огнём.</li>
-                  </ul>
+            <div class="members__tabs tabs">
+              <ul class="tabs__list">
+                <li class="tabs__item active">Дистанция 5 км</li>
+                <li class="tabs__item">Дистанция 10 км</li>
+                <li class="tabs__item">Дистанция 5 км</li>
+              </ul>
+              <div class="tabs__body">
+                <div class="tabs__block active">
+                  <div class="tabs__selects">
+                    <select class="tabs__select tabs__select--1">
+                      <option></option>
+                      <option value="Федя" class="tabs__option">Федя</option>
+                    </select>
+                    <select class="tabs__select tabs__select--2">
+                      <option></option>
+                      <option value="Федя" class="tabs__option">Федя</option>
+                    </select>
+                    <select class="tabs__select tabs__select--3">
+                      <option></option>
+                      <option value="Федя" class="tabs__option">Федя</option>
+                    </select>
+                  </div>
+                  <div class="tabs__table">
+                    <table>
+                      <tr>
+                        <th>Место</th>
+                        <th>Номер</th>
+                        <th>Участник</th>
+                        <th>Регион</th>
+                        <th>Город/клуб</th>
+                        <th>Команда</th>
+                        <th>Результат</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>86</td>
+                        <td>Черезов Максим 30 лет</td>
+                        <td>Россия Ярославская обл.</td>
+                        <td>Переславль - Залесский/ Циклоспорт ТЕАМ</td>
+                        <td>Цикоспор ТЕАМ</td>
+                        <td>00:23:01.10 +00:00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>86</td>
+                        <td>Черезов Максим 30 лет</td>
+                        <td>Россия Ярославская обл.</td>
+                        <td>Переславль - Залесский/ Циклоспорт ТЕАМ</td>
+                        <td>Цикоспор ТЕАМ</td>
+                        <td>00:23:01.10 +00:00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>86</td>
+                        <td>Черезов Максим 30 лет</td>
+                        <td>Россия Ярославская обл.</td>
+                        <td>Переславль - Залесский/ Циклоспорт ТЕАМ</td>
+                        <td>Цикоспор ТЕАМ</td>
+                        <td>00:23:01.10 +00:00:00:00</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>86</td>
+                        <td>Черезов Максим 30 лет</td>
+                        <td>Россия Ярославская обл.</td>
+                        <td>Переславль - Залесский/ Циклоспорт ТЕАМ</td>
+                        <td>Цикоспор ТЕАМ</td>
+                        <td>00:23:01.10 +00:00:00:00</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="tabs__expand">Развернуть</div>
                 </div>
               </div>
-              <div class="about-ev__column">
-                <div class="about-ev__item item-about">
-                  <p class="item-about__title">СТАРТОВЫЙ ПАКЕТ КАЖДОМУ УЧАСТНИКУ:</p>
-                  <ul class="item-about__list">
-                    <li class="item-about__item">Медаль финишера</li>
-                    <li class="item-about__item">Канаты и канатные дороги</li>
-                    <li class="item-about__item">Номер участника и хронометраж</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="about-ev__column">
-                <div class="about-ev__item item-about">
-                  <p class="item-about__title">Фан-зона и отдых:</p>
-                  <ul class="item-about__list">
-                    <li class="item-about__item">Яркая и запоминающаяся шоу-программа</li>
-                    <li class="item-about__item">Горячий обед</li>
-                    <li class="item-about__item">Номер участника и хронометраж</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="about-ev__column">
-                <div class="about-ev__item item-about">
-                  <p class="item-about__title">Фан-зона и отдых:</p>
-                  <ul class="item-about__list">
-                    <li class="item-about__item">Яркая и запоминающаяся шоу-программа</li>
-                    <li class="item-about__item">Горячий обед</li>
-                    <li class="item-about__item">Номер участника и хронометраж</li>
-                  </ul>
-                </div>
-              </div>
             </div>
-            <div class="about-ev__schema schema">
-              <p class="schema__title">Схема трассы</p>
-              <div class="schema__image">
-                <img src="img/schema.png" alt="">
-              </div>
-            </div>
+
           </div>
-          <aside class="about-ev__aside aside-ev">
+          <aside class="members__aside aside-ev">
             <ul class="aside-ev__list">
               <li class="current">
                 <a href="#">О событии</a>
@@ -309,61 +334,6 @@
         </div>
       </section>
 
-      <section class="ev-video">
-        <div class="ev-video__container container">
-          <div class="ev-video__flex">
-            <div class="ev-video__left">
-              <a href="https://www.youtube.com/watch?v=83ReARpElvw&ab_channel=%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9%D0%A1%D0%B5%D0%B2%D0%B5%D1%80"
-                class="ev-video__video" data-fancybox="ev-video">
-                <div class="ev-video__img" style="background-image: url('img/ev-video.jpg');"></div>
-                <div class="ev-video__control">
-                  <p class="ev-video__control-text">Смотреть, как это было</p>
-                </div>
-              </a>
-            </div>
-            <div class="ev-video__right">
-              <h2 class="ev-video__title">Ультрамарафон 2019</h2>
-              <div class="ev-video__text">
-                <p>Забег, наполенный динамикой, где каждые два километра отличаются.</p>
-                <p>Все дистанции с технически сложной трассой.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <div class="ev-about__animate">
-        <div class="ev-about__row">
-          <div class="ev-about__moving-block">
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-1.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-2.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-3.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-4.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-4.jpg');"></div>
-          </div>
-          <div class="ev-about__moving-block ev-about__moving-block--helper">
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-1.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-2.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-3.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-4.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-4.jpg');"></div>
-          </div>
-        </div>
-        <div class="ev-about__row">
-          <div class="ev-about__moving-block">
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-1.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-5.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-6.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-7.jpg');"></div>
-          </div>
-          <div class="ev-about__moving-block ev-about__moving-block--helper">
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-1.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-5.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-6.jpg');"></div>
-            <div class="ev-about__image" style="background-image: url('img/ev-about-gal-7.jpg');"></div>
-          </div>
-        </div>
-      </div>
     </main>
 
     <footer class="footer">
@@ -390,6 +360,7 @@
   <script src="libs/jquery.inputmask.min.js"></script>
   <script src="libs/swiper.min.js"></script>
   <script src="libs/jquery.fancybox.min.js"></script>
+  <script src="libs/select2.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
