@@ -13,9 +13,7 @@
 	&__tabs {
 		.tabs__item {
 			padding: 10px 43px;
-		}
-		.tabs__item:not(:last-child) {
-			margin-right: 34px;
+			user-select: none;
 		}
 	}
 	&__aside {
@@ -45,7 +43,22 @@
 	}
 
 	// .tabs__select
-	&__select {
+	input.tabs__select {
+		background-color: transparent;
+		border-bottom: 1px solid #000000;
+		font-size: 18px;
+		line-height: 1.44;
+		letter-spacing: 0.05em;
+		color: #000000;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 8px;
+		@media (max-width: 992px) {
+			font-size: 16px;
+		}
+		@media (max-width: 425px) {
+			font-size: 14px;
+		}
 	}
 	// .tabs__select
 	&__option {
@@ -93,6 +106,10 @@
 		text-decoration-line: underline;
 		text-transform: uppercase;
 		color: #d60007;
+		cursor: pointer;
+		&:hover {
+			text-decoration-line: none;
+		}
 	}
 }
 

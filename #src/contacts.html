@@ -216,17 +216,17 @@
 		<main class="main main--grey">
 			<div class="breadcrumbs">
 				<div class="breadcrumbs__container container">
-					<span>
-						<a href="#">
-							<span>Главная</span>
+					<!-- Breadcrumb NavXT 6.6.0 -->
+					<span property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" title="Перейти к Вологодские лоси." href="http://site3.udnet-test.ru"
+							class="home"><span property="name">Вологодские лоси</span>
 						</a>
 					</span>
 					<span class="breadcrumbs__break"></span>
-					<span>
-						<span class="currnet-item">Контакты</span>
+					<span property="itemListElement" typeof="ListItem">
+						<span property="name" class="post post-page current-item">Контакты</span>
 					</span>
 				</div>
-
 			</div>
 
 			<section class="contacts">
@@ -261,6 +261,9 @@
 									</div>
 								</div>
 							</div>
+							<div class="contacts__column contacts__column--helper"></div>
+							<div class="contacts__column contacts__column--helper"></div>
+							<div class="contacts__column contacts__column--helper"></div>
 						</div>
 					</div>
 				</div>

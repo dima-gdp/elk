@@ -4,18 +4,18 @@ $(document).ready(function () {
 	const mobMenu = $('.mob-menu');
 	const burger = $('.header__burger');
 
-	$('.tabs__select--1').select2({
-		width: '100%',
-		placeholder: 'ФИО или номер',
-	});
-	$('.tabs__select--2').select2({
-		width: '100%',
-		placeholder: 'Возрастная группа',
-	});
-	$('.tabs__select--3').select2({
-		width: '100%',
-		placeholder: 'Регион',
-	});
+	if (document.querySelector('.tabs__select')) {
+		$('.tabs__select--1').select2({
+			width: '100%',
+			placeholder: 'Возрастная группа',
+		});
+		$('.tabs__select--2').select2({
+			width: '100%',
+			placeholder: 'Регион',
+		});
+	}
+
+
 
 
 	function animateSection() {

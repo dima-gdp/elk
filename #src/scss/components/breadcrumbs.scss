@@ -7,13 +7,18 @@
 	}
 	&__container {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		a,
+		.home,
+		.post,
 		.currnet-item {
 			font-size: 14px;
 			line-height: 1.86;
 			letter-spacing: 0.05em;
 			color: #000000;
+			@media (max-width: 576px) {
+				font-size: 13px;
+			}
 		}
 	}
 	// .breadcrumbs__break
@@ -23,6 +28,10 @@
 		width: 32px;
 		height: 7px;
 		background: url("../img/break.svg") center / contain no-repeat;
+		@media (max-width: 576px) {
+			width: 22px;
+			height: 6px;
+		}
 	}
 
 	.currnet-item {

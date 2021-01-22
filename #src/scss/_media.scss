@@ -21,7 +21,7 @@
 	}
 
 	.contacts__column {
-		flex: 0 0 33%;
+		// flex: 0 0 33%;
 	}
 	.trail-single__container {
 		@include adaptiv(padding-bottom, 150, 50, 1600, 320);
@@ -164,6 +164,7 @@
 
 	.news__inst {
 		max-width: 320px;
+		width: 320px;
 	}
 	.inst__id {
 		font-size: 25px;
@@ -208,7 +209,7 @@
 		margin: 0 -40px;
 	}
 	.contacts__column {
-		padding: 0 40px;
+		padding: 0 40px 30px 40px;
 	}
 	.trail-single__left {
 		flex: 0 0 67%;
@@ -320,15 +321,16 @@
 	}
 
 	.tabs__list {
+		margin-left: -17px;
+		margin-right: -17px;
 		margin-bottom: 37px;
 	}
-	.tabs__item:not(:last-child) {
-		margin-right: 35px;
-	}
+
 	.tabs__item {
 		min-height: 60px;
 		padding: 10px 40px;
 		font-size: 17px;
+		margin: 0px 17px 20px 17px;
 	}
 	.footer__container {
 		justify-content: center;
@@ -477,7 +479,7 @@
 		margin: 0 -25px;
 	}
 	.contacts__column {
-		padding: 0 25px;
+		padding: 0 25 25px 25px;
 	}
 	.item-contacts__position {
 		font-size: 18px;
@@ -619,13 +621,16 @@
 	.header__social a:not(:last-child) {
 		margin-right: 25px;
 	}
-	.tabs__item:not(:last-child) {
-		margin-right: 30px;
-	}
+
 	.tabs__item {
 		min-height: 60px;
 		padding: 10px 30px;
 		font-size: 16px;
+		margin: 0px 15px 20px 15px;
+	}
+	.tabs__list {
+		margin-left: -15px;
+		margin-right: -15px;
 	}
 	.news__men {
 		height: 595px;
@@ -1040,20 +1045,16 @@
 		font-size: 28px;
 	}
 	.tabs__item {
-		margin-bottom: 15px;
+		margin: 0px 7px 15px 7px;
 		line-height: 1;
 		min-height: 43px;
 		border-radius: 80px;
 		font-size: 13px;
 		flex-grow: 1;
 	}
-
-	.tabs__item:not(:last-child) {
-		margin-right: 15px;
-	}
-
-	.tabs__item {
-		margin-right: 15px;
+	.tabs__list {
+		margin-right: -7px;
+		margin-left: -7px;
 	}
 
 	.footer__container {
@@ -1330,9 +1331,6 @@
 		height: 7px;
 		margin-bottom: 10px;
 	}
-	.members__tabs .tabs__item:not(:last-child) {
-		margin-right: 15px;
-	}
 }
 
 @media (max-width: 425px) {
@@ -1374,7 +1372,7 @@
 		margin-bottom: 20px;
 	}
 	.tabs__item {
-		margin-bottom: 10px;
+		margin: 0px 7px 10px 7px;
 	}
 	.tabs__list {
 		margin-bottom: 15px;

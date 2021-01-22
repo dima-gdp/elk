@@ -413,6 +413,14 @@ body {
 					background-color: #fff;
 					border-radius: 100%;
 				}
+				&::after {
+					left: 16px;
+				}
+				&:hover {
+					&::after {
+						width: calc(100% - 16px);
+					}
+				}
 			}
 		}
 
@@ -428,7 +436,7 @@ body {
 				content: "";
 				position: absolute;
 				bottom: 0;
-				left: 0;
+				left: 0px;
 				width: 0px;
 				height: 1px;
 				background: #fff;
@@ -469,9 +477,12 @@ body {
 	border-bottom: 1px solid #000000;
 	border-radius: 0;
 	background-color: transparent;
+	height: 35px;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__placeholder {
+.select2-container--default .select2-selection--single .select2-selection__placeholder,
+.select2-container--default .select2-selection--single .select2-selection__rendered,
+input.tabs__select::placeholder {
 	font-size: 18px;
 	line-height: 1.44;
 	letter-spacing: 0.05em;
@@ -483,6 +494,11 @@ body {
 		font-size: 14px;
 	}
 }
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+	padding-left: 20px;
+}
+
 .select2-results__option {
 	@media (max-width: 425px) {
 		font-size: 14px;
