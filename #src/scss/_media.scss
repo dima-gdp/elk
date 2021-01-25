@@ -1,8 +1,8 @@
 @media (max-width: 1640px) {
 	.header__nav {
-		padding: 15px 50px 0px 50px;
+		padding: 15px 0 0px 50px;
 	}
-	.header__nav li:not(:last-child) {
+	.header__nav > li:not(:last-child) {
 		margin-right: 45px;
 	}
 	.news__men {
@@ -133,15 +133,16 @@
 		flex: 0 0 70%;
 	}
 
-	.header__nav li:not(:last-child) {
-		margin-right: 3vw;
+	.header__nav > li:not(:last-child) {
+		margin-right: 1.5vw;
 	}
 	.header__nav {
-		padding: 15px 0px 0px 15px;
+		padding: 15px 0px 0px 0px;
+		justify-content: space-between;
 	}
 	.header__nav li a {
 		font-weight: 500;
-		font-size: 17px;
+		font-size: 16px;
 	}
 	.header__logo {
 		flex: 0 0 97px;
@@ -289,6 +290,10 @@
 }
 
 @media (max-width: 1200px) {
+	.header {
+		padding-bottom: 18px;
+	}
+
 	.header__nav {
 		display: none;
 	}

@@ -184,7 +184,10 @@ $(document).ready(function () {
 		$(window).on('scroll', animateSection);
 		$(window).on('scroll', parallax);
 	}
-
-
-
 })
+
+
+
+
+
+
