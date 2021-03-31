@@ -12,6 +12,7 @@
 @import "components/trail-single.scss";
 @import "components/trail-arhive.scss";
 @import "components/coming-race.scss";
+@import "_pagination.scss";
 
 @import "_modal.scss";
 @import "_polit-modal.scss";
@@ -54,7 +55,7 @@
 		@media (min-width: 992px) {
 			&:hover.mob-menu__close::after,
 			&:hover.mob-menu__close::before {
-				background-color: #358bee;
+				background-color: #e31e24;
 			}
 		}
 
@@ -101,11 +102,12 @@
 		margin-bottom: 40px;
 
 		a {
-			svg path {
-				transition: fill 0.3s;
+			img {
+				filter: brightness(0.02);
+				transition: 0.3s;
 			}
-			&:hover svg path {
-				fill: #ca0006;
+			&:hover img {
+				filter: none;
 			}
 			&:not(:last-child) {
 				margin-right: 39px;
@@ -850,6 +852,10 @@
 			display: block;
 		}
 	}
+
+	&__btn-load-wrapper {
+		width: 100%;
+	}
 	// .tabs__btn-load
 	&__btn-load {
 		display: block;
@@ -862,6 +868,7 @@
 		text-transform: uppercase;
 		text-align: center;
 		color: #e31e24;
+		background-color: transparent;
 	}
 }
 

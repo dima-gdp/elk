@@ -9,6 +9,10 @@
 	}
 	// .trail-archive__list
 	&__list {
+		margin-bottom: 77px;
+		@media (max-width: 1200px) {
+			@include adaptiv(margin-bottom, 77, 35, 1200, 320);
+		}
 	}
 	// .trail-archive__row
 	&__row {

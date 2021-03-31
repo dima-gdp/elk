@@ -9,9 +9,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		.home,
-		.post,
-		.currnet-item {
+		a,
+		span {
 			font-size: 14px;
 			line-height: 1.86;
 			letter-spacing: 0.05em;
